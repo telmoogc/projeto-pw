@@ -1,2 +1,2 @@
-# projeto-pw
-Projeto Programação Web
+# Sabores do Ribate
+Projeto Programação Web sobre um restaurante ficticio
