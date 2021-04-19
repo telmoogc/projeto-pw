@@ -10,6 +10,7 @@ body {
   align-items: center;
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 .background-sticky {
@@ -18,6 +19,7 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
 
 /* FOOTER BEGINS */
 
@@ -121,6 +123,10 @@ header nav .logo {
   align-items: center;
   font-size: 1.5em;
   color: #fff;
+}
+
+.logo img{
+  cursor: pointer;
 }
 
 header nav .nav-links {
@@ -254,13 +260,15 @@ header nav .burger .line {
   text-align: center;
   font-size: 1.8vw;
   color: #fff;
+  margin-bottom: 75px;
+  font-weight: bold;
 }
 
 /* BANNER-TITLE ENDS */
 
 /* BANNER-BTN BEGINS */
 
-.home-btn {
+.home-btn, .reservas-btn {
   cursor: pointer;
   position: relative;
   display: flex;
@@ -272,9 +280,20 @@ header nav .burger .line {
   border-color: transparent;
   transition: 0.5s;
   overflow: hidden;
+  font-size: 1.8vw;
+  font-family: 'Nanum Brush Script';
 }
 
-.home-btn:before {
+.reservas-btn {
+  font-size: 0.8vw;
+  font-family: 'Poppins';
+}
+
+#banner-title a {
+  text-decoration: none;
+}
+
+.home-btn:before, .reservas-btn:before {
   content: "";
   position: absolute;
   top: 0;
@@ -286,12 +305,12 @@ header nav .burger .line {
   transition: 0.5s;
 }
 
-.home-btn:hover:before {
+.home-btn:hover:before, .reservas-btn:hover:before {
   width: 100%;
   height: 100%;
 }
 
-.home-btn:after {
+.home-btn:after, .reservas-btn:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -303,7 +322,7 @@ header nav .burger .line {
   transition: 0.5s;
 }
 
-.home-btn:hover:after {
+.home-btn:hover:after, .reservas-btn:hover:after {
   width: 100%;
   height: 100%;
 }
@@ -343,23 +362,24 @@ header nav .burger .line {
 }
 
 .aboutUs-img {
-  position: relative;
-  width: 35%;
+  width: 25%;
   float: left;
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 .aboutUs-text-cozinha {
   text-align: center;
   font-size: 2.5em;
   color: #fff;
+  font-weight: bold;
+  margin: 0 20%;
 }
 
 /* TEXT BEGINS */
 
 /* GALLERY BEGINS */
 
-.gallery-sect {
+.gallery-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -392,6 +412,13 @@ header nav .burger .line {
 |*****************************************************|
 \*****************\ MENU PAGE BEGINS /****************/
 
+
+.background-sticky-menu {
+  background: url("../images/madeira.jpeg") repeat fixed 100%;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
 
 .menu-container {
   width: 80%;
@@ -514,6 +541,10 @@ header nav .burger .line {
   transition: 0.5s;
 }
 
+.container .row100 .col p a{
+  text-decoration: none;
+}
+
 .container .row100 .inputBox{
   position: relative;
   width: 100%;
@@ -627,6 +658,67 @@ input[type="submit"]{
   }
 }*/
 
+
+
+.table-content, .table-content-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: #fff;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 200px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table-content {
+  top: 50%;
+  left: 25%;
+}
+
+.table-content-2 { 
+  top: 50%;
+  left: 70%;
+}
+
+
+.table-content thead tr {
+  background-color: #d0af84;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-content th, .table-content td {
+  padding: 12px 15px;
+}
+
+.table-content tbody tr {
+  border-bottom: 1px solid #fff;
+}
+
+
+.table-content tbody tr:last-of-type {
+  border-bottom: 2px solid #fff;
+}
+
+.table-content tbody tr.active-row {
+  font-weight: bold;
+  color: #fff;
+}
+
+
+@media (orientation: landscape) {
+  body header{
+    flex-direction: row;
+  }
+}
+
 @media screen and (max-width: 1450px) {
   .menu-container {
     position: absolute;
@@ -635,9 +727,11 @@ input[type="submit"]{
     margin: auto;
     width: 50%;
   }
+
+  .background-sticky-menu {
+    height: 1700px;
+  }
 }
-
-
 
 
 @media screen and (max-width: 768px) {
