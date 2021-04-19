@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
 
 .background-sticky {
@@ -17,6 +18,84 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
+/* FOOTER BEGINS */
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  width: 100%;
+  padding-top: 40px;
+  color: #fff;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.socials a i {
+  font-size: 1.1rem;
+  transition: color 0.4s ease;
+}
+
+.socials a:hover i {
+  color: #d0af84;
+}
+
+.footer-bottom {
+  background: #000;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 200;
+}
+
+/* FOOTER ENDS */
 
 
 /*****************\ HOME PAGE BEGINS /*****************/
@@ -29,7 +108,6 @@ header nav {
   left: 0;
   right: 0;
   top: 0;
-  font-family: "Poppins", sans-serif;
   padding: 0 5%;
   height: 100px;
   background-color: transparent;
@@ -65,7 +143,7 @@ header nav .nav-links li::after {
   content: "";
   width: 0;
   height: 2px;
-  background: yellow;
+  background: #d0af84;
   display: block;
   margin: auto;
   transition: 0.5s;
@@ -174,7 +252,6 @@ header nav .burger .line {
 
 .home-title {
   text-align: center;
-  font-family: "Poppins", sans-serif;
   font-size: 1.8vw;
   color: #fff;
 }
@@ -188,7 +265,6 @@ header nav .burger .line {
   position: relative;
   display: flex;
   padding: 10px 30px;
-  font-family: "Poppins", sans-serif;
   text-decoration: none;
   letter-spacing: 4px;
   background-color: transparent;
@@ -205,8 +281,8 @@ header nav .burger .line {
   left: 0;
   width: 10px;
   height: 10px;
-  border-top: 2px solid yellow;
-  border-left: 2px solid yellow;
+  border-top: 2px solid #d0af84;
+  border-left: 2px solid #d0af84;
   transition: 0.5s;
 }
 
@@ -222,8 +298,8 @@ header nav .burger .line {
   right: 0;
   width: 10px;
   height: 10px;
-  border-bottom: 2px solid yellow;
-  border-right: 2px solid yellow;
+  border-bottom: 2px solid #d0af84;
+  border-right: 2px solid #d0af84;
   transition: 0.5s;
 }
 
@@ -316,84 +392,92 @@ header nav .burger .line {
 |*****************************************************|
 \*****************\ MENU PAGE BEGINS /****************/
 
-/* FOOTER BEGINS */
 
-footer {
+.menu-container {
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 15%;
+}
+
+.menu-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.menu-title h1 {
+  text-transform: capitalize;
+  font-size: 36px;
   position: relative;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+.menu-title h1:before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #d0af84;
   bottom: 0;
-  left: 0;
-  right: 0;
-  background: #111;
-  width: 100%;
-  font-family: "Poppins";
-  padding-top: 40px;
-  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.footer-content {
-  text-align: center;
-}
-
-.footer-content h3 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  text-transform: capitalize;
-  line-height: 3rem;
-}
-
-.footer-content p {
-  max-width: 500px;
-  margin: 10px auto;
-  line-height: 28px;
-  font-size: 14px;
-}
-
-.socials {
-  list-style: none;
+.menu {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu-item {
+  flex-basis: 580px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #d0af84;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin: 1rem 0 3rem 0;
 }
 
-.socials li {
-  margin: 0 10px;
+.menu-item:nth-last-child(1), .menu-item:nth-last-child(2) {
+  border-bottom: 0;
 }
 
-.socials a {
-  text-decoration: none;
+.menu-item img {
+  max-width: 200px; /* REDIMENSIONAR NO PAINT E DEPOIS APAGAR ESTA LINHA DE CÓDIGO */
+  margin-right: 30px;
+  border-radius: 50%;
+  border: 1px solid #d0af84;
+  padding: 3px;
+  transition: 0.5s;
+}
+
+.menu-item:hover img {
+  border-radius: 0;
+}
+
+.menu-item h4 {
   color: #fff;
-}
-
-.socials a i {
-  font-size: 1.1rem;
-  transition: color 0.4s ease;
-}
-
-.socials a:hover i {
-  color: yellow;
-}
-
-.footer-bottom {
-  background: #000;
-  width: 100%;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.footer-bottom p {
-  font-size: 14px;
-  word-spacing: 2px;
   text-transform: capitalize;
+  font-size: 22px;
+  border-bottom: 1px dashed #d0af84;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 
-.footer-bottom span {
-  text-transform: uppercase;
-  opacity: 0.4;
-  font-weight: 200;
+.menu-item h4 span{
+  float: right;
+  color: #d0af84;
 }
 
-/* FOOTER ENDS */
+.menu-content p {
+  color: #fff;
+  margin-top: 20px;
+}
+
 
 /********************\ MENU PAGE ENDS /*******************\
 |*********************************************************|
@@ -406,16 +490,6 @@ footer {
   padding: 5%; /*20px*/
   animation: popup 0.5s ease forwards;
 }
-
-/*.close {
-  position: relative;
-  color: #d0af84;
-  right: 38.5%;
-  font-size: 42px;
-  transform: rotate(45deg);
-  cursor: pointer;
-}*/
-
 
 .container h2 {
   width: 100%;
@@ -490,7 +564,6 @@ footer {
   transition: 0.5s;
   border-radius: 2px;
   pointer-events: none;
-
 }
 
 .container .row100 .inputBox input:focus ~ .line,
@@ -554,6 +627,19 @@ input[type="submit"]{
   }
 }*/
 
+@media screen and (max-width: 1450px) {
+  .menu-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+  }
+}
+
+
+
+
 @media screen and (max-width: 768px) {
   /* NAVBAR BEGINS */
   header nav .logo {
@@ -608,5 +694,25 @@ input[type="submit"]{
     opacity: 0;
   }
 
+  .menu-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+  }
+
+  .menu-item {
+    flex-basis: 480px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   /* NAVBAR ENDS */
 }
+
+
+
